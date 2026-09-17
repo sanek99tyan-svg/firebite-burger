@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Firebite — unapologetically bold smash burgers, loaded fries and ice-cold shakes.">
+  <title>FIREBITE — Smashed Hard. Served Hot.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e62b1e'/%3E%3Cpath d='M15 36h34c0 9-7 14-17 14S15 45 15 36Zm2-4c1-10 7-17 15-17s14 7 15 17H17Zm6-5h18' fill='none' stroke='%23fff3dc' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="Firebite home">
+      <span class="logo-mark">F</span><span>FIRE<span>BITE</span></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#menu">Menu</a><a href="#deal">Deals</a><a href="#story">Our fire</a><a href="#visit">Locations</a>
+    </nav>
+    <button class="cart-button" type="button" aria-label="Open cart">Bag <span id="cartCount">0</span></button>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero-image" src="hero-burger.webp" alt="Double smash burger with melted cheese, pickles and house sauce">
+      <div class="hero-shade"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> Smashed fresh. Never frozen.</p>
+        <h1>LOUD.<br><em>JUICY.</em><br>UNFAIR.</h1>
+        <p class="hero-text">Crispy edges, molten cheese, toasted brioche. One bite and your standards are ruined forever.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#menu">Taste the menu <b>↘</b></a>
+          <span class="rating"><strong>4.9</strong> ★★★★★<small>2,800+ hungry people</small></span>
+        </div>
+      </div>
+      <div class="hero-stamp" aria-hidden="true">100%<br><strong>FRESH</strong><br>BEEF</div>
+      <div class="scroll-tag">SCROLL TO FEED THE CRAVING ↓</div>
+    </section>
+
+    <section class="ticker" aria-label="Firebite qualities">
+      <div>SMASHED TO ORDER <i>✦</i> REAL BEEF <i>✦</i> ZERO SHORTCUTS <i>✦</i> BIG FLAVOR <i>✦</i> SMASHED TO ORDER <i>✦</i> REAL BEEF <i>✦</i></div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading reveal">
+        <div><p class="script">Pick your poison</p><h2>CROWD<br>CRUSHERS.</h2></div>
+        <p>Built with crispy-edge patties, toasted brioche and the kind of sauce you think about tomorrow.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-card reveal">
+          <div class="card-image card-classic"><img src="hero-burger.webp" alt="The Firestarter double burger"><span>01</span></div>
+          <div class="card-copy"><div><h3>The Firestarter</h3><p>Double smash, American cheese, pickles, onions, fire sauce.</p></div><div class="price">$13.90</div></div>
+          <button class="add-button" data-item="The Firestarter" data-price="13.90">Add to bag <span>+</span></button>
+        </article>
+        <article class="menu-card featured reveal">
+          <div class="card-image card-spicy"><img src="combo-meal.webp" alt="Hot Mess smash burger"><span>02</span><b>BEST<br>SELLER</b></div>
+          <div class="card-copy"><div><h3>Hot Mess</h3><p>Double smash, jalapeños, hot honey, cheese, smoky mayo.</p></div><div class="price">$14.90</div></div>
+          <button class="add-button" data-item="Hot Mess" data-price="14.90">Add to bag <span>+</span></button>
+        </article>
+        <article class="menu-card reveal">
+          <div class="card-image card-bacon"><img src="hero-burger.webp" alt="Bacon overload burger"><span>03</span></div>
+          <div class="card-copy"><div><h3>Bacon Overload</h3><p>Double smash, smoked bacon, cheddar, onions, BBQ glaze.</p></div><div class="price">$15.50</div></div>
+          <button class="add-button" data-item="Bacon Overload" data-price="15.50">Add to bag <span>+</span></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="deal" id="deal">
+      <img src="combo-meal.webp" alt="Firebite burger meal with fries and cola">
+      <div class="deal-copy reveal">
+        <p class="script">Your craving called</p>
+        <h2>MAKE IT<br>A <em>MEAL.</em></h2>
+        <p>Add hand-cut fries and an ice-cold drink to any burger.</p>
+        <div class="deal-price"><span>JUST</span><strong>$4.90</strong></div>
+        <button class="button button-light" data-item="Make It A Meal" data-price="4.90">Add the upgrade <b>+</b></button>
+      </div>
+    </section>
+
+    <section class="story" id="story">
+      <div class="story-number">01</div>
+      <div class="story-title reveal"><p class="script">No secret. Just heat.</p><h2>WE SMASH<br>BECAUSE<br><em>FLAT HITS<br>DIFFERENT.</em></h2></div>
+      <div class="story-text reveal"><p>We press fresh beef on screaming-hot steel until the edges go wild and crispy. Then we stack it fast, wrap it tight and hand it over hot.</p><div class="promise"><span>✦</span><b>Fresh daily<br>No freezers<br>No apologies</b></div></div>
+    </section>
+
+    <section class="visit" id="visit">
+      <p class="script">Come hungry</p>
+      <h2>FIND YOUR FIRE.</h2>
+      <div class="location-row"><div><span>01</span><h3>DOWNTOWN</h3><p>127 Flame Street · Open until 1 AM</p></div><a href="#">Directions ↗</a></div>
+      <div class="location-row"><div><span>02</span><h3>RIVER MARKET</h3><p>84 Foundry Lane · Open until midnight</p></div><a href="#">Directions ↗</a></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">FIRE<span>BITE</span></div>
+    <p>Good burgers. Bad manners.</p>
+    <div><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Privacy</a></div>
+    <small>© 2026 FIREBITE BURGER CO.</small>
+  </footer>
+
+  <div class="mobile-drawer" aria-hidden="true"><a href="#menu">Menu</a><a href="#deal">Deals</a><a href="#story">Our fire</a><a href="#visit">Locations</a></div>
+  <aside class="cart" aria-hidden="true">
+    <div class="cart-head"><div><p class="script">Almost yours</p><h2>YOUR BAG</h2></div><button class="cart-close" aria-label="Close cart">×</button></div>
+    <div id="cartItems" class="cart-items"><p class="empty-cart">Your bag is hungry.</p></div>
+    <div class="cart-foot"><div><span>Total</span><strong id="cartTotal">$0.00</strong></div><button class="checkout">Checkout</button></div>
+  </aside>
+  <div class="backdrop"></div>
+  <div class="toast" role="status" aria-live="polite">Added to your bag</div>
+  <script src="script.js"></script>
+</body>
+</html>
