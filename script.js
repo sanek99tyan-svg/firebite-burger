@@ -1,0 +1,12 @@
+const bag=[];const cart=document.querySelector('.cart');const backdrop=document.querySelector('.backdrop');const toast=document.querySelector('.toast');const mobile=document.querySelector('.mobile-drawer');
+const money=n=>`$${n.toFixed(2)}`;
+function renderBag(){const box=document.querySelector('#cartItems');document.querySelector('#cartCount').textContent=bag.length;document.querySelector('#cartTotal').textContent=money(bag.reduce((a,b)=>a+b.price,0));if(!bag.length){box.innerHTML='<p class="empty-cart">Your bag is hungry.</p>';return}box.innerHTML=bag.map((x,i)=>`<div class="cart-item"><div><b>${x.name}</b><span>${money(x.price)}</span></div><button data-remove="${i}" aria-label="Remove ${x.name}">Remove</button></div>`).join('')}
+function showCart(){cart.classList.add('open');backdrop.classList.add('show');cart.setAttribute('aria-hidden','false')}
+function closePanels(){cart.classList.remove('open');mobile.classList.remove('open');backdrop.classList.remove('show');cart.setAttribute('aria-hidden','true')}
+document.querySelectorAll('[data-item]').forEach(btn=>btn.addEventListener('click',()=>{bag.push({name:btn.dataset.item,price:Number(btn.dataset.price)});renderBag();toast.textContent=`${btn.dataset.item} added`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)}));
+document.querySelector('#cartItems').addEventListener('click',e=>{if(e.target.dataset.remove!==undefined){bag.splice(Number(e.target.dataset.remove),1);renderBag()}});
+document.querySelector('.cart-button').addEventListener('click',showCart);document.querySelector('.cart-close').addEventListener('click',closePanels);backdrop.addEventListener('click',closePanels);
+document.querySelector('.menu-toggle').addEventListener('click',e=>{const button=e.currentTarget;const opened=mobile.classList.toggle('open');button.setAttribute('aria-expanded',String(opened));backdrop.classList.toggle('show',opened)});
+document.querySelectorAll('.mobile-drawer a').forEach(a=>a.addEventListener('click',closePanels));
+document.querySelector('.checkout').addEventListener('click',()=>{if(!bag.length)return;toast.textContent='Demo checkout — your order looks delicious!';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2600);closePanels()});
+const observer=new IntersectionObserver(entries=>entries.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>observer.observe(x));renderBag();
